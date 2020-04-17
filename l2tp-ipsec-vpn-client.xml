@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Category>Tools Network:Proxy Network:Other</Category>
+  <Name>l2tp-ipsec-vpn-client</Name>
+  <Repository>ubergram/l2tp-ipsec-vpn-client</Repository>
+  <Registry>https://hub.docker.com/r/ubergarm/l2tp-ipsec-vpn-client/dockerfile</Registry>
+  <Network>host</Network>
+  <Privileged>true</Privileged>
+  <Support>https://hub.docker.com/r/ubergarm/l2tp-ipsec-vpn-client/</Support>
+  <Project/>
+  <Overview>A tiny Alpine based docker image to quickly setup an L2TP over IPsec VPN client w/ PSK.
+Does your office or a client have a VPN server already setup and you just need to connect to it? Do you use Linux and are jealous that the one thing a MAC can do better is quickly setup this kind of VPN?
+
+Then here is all you need:
+ 1. VPN Server Address
+ 2. Pre Shared Key
+ 3. Username
+ 4. Password
+  </Overview>
+  <TemplateURL>https://github.com/Thunderbird2086/unraid-l2tp-ipsec-vpn-client-docker/blob/master/l2tp-ipsec-vpn-client.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Thunderbird2086/unraid-l2tp-ipsec-vpn-client-docker/master/img/l2tp-ipsec-vpn-client.jpg</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <DateInstalled>1534599763</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Data>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/lib/modules/</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>1.2.3.4</Value>
+      <Name>VPN_SERVER_IPV4</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>pre shared key</Value>
+      <Name>VPN_PSK</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>user@example.com</Value>
+      <Name>VPN_USERNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>password</Value>
+      <Name>VPN_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="VPN_SERVER_IPV4" Target="VPN_SERVER_IPV4" Default="1.2.3.4" Mode="" Description="Set L2TP/IPSec server IPV4 address" Type="Variable" Display="always" Required="true" Mask="false">1.2.3.4</Config>
+  <Config Name="VPN_PSK" Target="VPN_PSK" Default="pre sahred key" Mode="" Description="Pre Shared Key" Type="Variable" Display="always" Required="true" Mask="false">pre shared key</Config>
+  <Config Name="VPN_USERNAME" Target="VPN_USERNAME" Default="user@example.com" Mode="" Description="Username" Type="Variable" Display="always" Required="true" Mask="false">username</Config>
+  <Config Name="VPN_PASSWORD" Target="VPN_PASSWORD" Default="password" Mode="" Description="L2TP/IPSec password" Type="Variable" Display="always" Required="true" Mask="false">passowrd</Config>
+</Container>
