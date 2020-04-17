@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <Container version="2">
+  <Beta>False</Beta>
   <Category>Tools Network:Proxy Network:Other</Category>
   <Name>l2tp-ipsec-vpn-client</Name>
-  <Repository>ubergram/l2tp-ipsec-vpn-client</Repository>
+  <Repository>ubergarm/l2tp-ipsec-vpn-client</Repository>
   <Registry>https://hub.docker.com/r/ubergarm/l2tp-ipsec-vpn-client/dockerfile</Registry>
   <Network>host</Network>
   <Privileged>true</Privileged>
